@@ -1,30 +1,23 @@
-#include<stdio.h>
-#include<stdlib.h>
-
-int main(void){
-
-	int i, k, j;
-
-
-	scanf ("%d", &i);
-    i = 4 * i;
-    int a[i];
-    for ( k=0; k<i; k++){
-        scanf ("%d", &a[k]);
-    }
-
-    for ( j=0; j<i; j++){
-        printf ("%d ", a[j]);
-        if ( j % 4 == 3){
-            if (a[j]-a[j-1] == a[j-1]-a[j-2]){
-                printf ("%d\n", 2*a[j]-a[j-1]);
-            }else if (a[j]/a[j-1] == a[j-1]/a[j-2]){
-                printf ("%d\n", a[j]*a[j]/a[j-1]);
-            }
-
-        }
-    }
-
-
-	return 0;
-}
+#include <stdio.h>  
+#include <stdlib.h>  
+  
+int main()  
+{  
+    int a, b, c = -1;  
+    double PI = 0, d;  
+  
+    scanf ("%d", &a);  
+  
+    for (b=1; b<=a; b++){  
+        if (b % 2 == 1){  
+            d = (c + 2 * b);  
+        }else{  
+            d = - (c + 2 * b);  
+        }  
+  
+        PI = PI + 4 / d;  
+    }  
+    printf ("%.9lf\n", PI);  
+  
+    return 0;  
+}  
